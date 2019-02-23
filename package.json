@@ -1,14 +1,15 @@
 {
-  "name": "",
+  "name": "JomboProxy",
   "version": "",
   "description": "",
-  "author": "",
+  "author": "Melanie",
   "license": "",
+  "private": true,
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server/server.js"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "morgan": "^1.9.0",

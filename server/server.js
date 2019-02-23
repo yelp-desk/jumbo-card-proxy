@@ -2,14 +2,17 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const bodyParser = require('body-parser');
+const port = 8081;
 
-app.use(morgan('dev'));
-app.use(express.static((__dirname + '/../public/')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+//setup the static for the path of /public
+app.use(express.static(path.join(__dirname, '/../public/')));
 
 app.use('*', (req, res) => {
 	res.sendFile(path.join(__dirname, '/../public/'));
 });
 app.listen(port, () => {
-	console.log(`server running at: http://localhost:${port}`);
+	console.log(`server running at: ${port}`);
 });

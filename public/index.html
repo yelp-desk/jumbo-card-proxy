@@ -17,7 +17,13 @@
       </div>
 
     </div>
-    <div id="jumbo-card"></div>
+    <div class="prox-background">
+      <div class="background-grey"></div>
+      <div class="proxy-contain">
+        <div id="jumbo-card"></div>
+        <div id="gallery"></div>
+      </div>
+    </div>
 
     <div class="super-container">
       <div id="review"></div>
@@ -26,26 +32,12 @@
 
 
 
-    <!--<script src="http://thiscard.us-east-2.elasticbeanstalk.com/bundle.js"></script>-->
-    <script src="http://ec2-54-212-0-46.us-west-2.compute.amazonaws.com/bundle.js"></script>
-    <!--<script src="http://localhost:3003/bundle.js"></script>-->
-    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
-    <script>
-	    let gallery = 'http://ec2-3-84-81-19.compute-1.amazonaws.com/bundle.js';
-	    let jumbo = 'http://thiscard.us-east-2.elasticbeanstalk.com/bundle.js';
-	    let loadScriptAsync = (uri) => {
-		    var tag = document.createElement('script');
-		    tag.setAttribute('src', uri);
-		    document.body.appendChild(tag);
-		    tag.onload = () => {
-			    var tag = document.createElement('script');
-			    tag.setAttribute('src', gallery);
-			    document.body.appendChild(tag);
-			    document.body.appendChild(tag);
-		    };
-	    }
-	    var scriptLoaded = loadScriptAsync(jumbo)
-    </script>
+
 
   </body>
+  <script src="http://thiscard.us-east-2.elasticbeanstalk.com/bundle.js"></script>
+  <script src="http://ec2-3-84-81-19.compute-1.amazonaws.com/bundle.js"></script>
+  <script src="http://ec2-54-212-0-46.us-west-2.compute.amazonaws.com/bundle.js"></script>
+
+
 </html>
